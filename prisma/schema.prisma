@@ -16,6 +16,7 @@ model Account {
   id              String   @id @default(cuid())
   discordUsername String
   pullRequestUrl  String
+  isAccepted      Boolean?
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 }
