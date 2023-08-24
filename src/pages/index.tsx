@@ -12,7 +12,7 @@ const Home: NextPage = () => {
             Contribute to open source together.
           </h1>
           <div className="mt-4 flex flex-col gap-2">
-            <Link href="/home">
+            <Link href="/apply">
               <Button size="sm" variant="secondary" className="text-xs">
                 Join beta
               </Button>
