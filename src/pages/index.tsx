@@ -14,7 +14,7 @@ const Home: NextPage = () => {
           <div className="mt-4 flex flex-col gap-2">
             <Link href="/apply">
               <Button size="sm" variant="secondary" className="text-xs">
-                Join beta
+                Apply for beta
               </Button>
             </Link>
             <a
