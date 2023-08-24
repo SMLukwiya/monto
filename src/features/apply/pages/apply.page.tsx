@@ -6,6 +6,7 @@ import { useZodForm } from "@/features/shared/hooks/use-zod-form";
 import { handlePromise } from "@/features/shared/utils/utils";
 import { api } from "@/server/lib/api";
 import { Loader2 } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { z } from "zod";
 
@@ -56,7 +57,7 @@ export default function ApplyPage() {
           <h1 className="text-xl font-semibold leading-tight tracking-tighter">
             Apply to our community
           </h1>
-          <div className="mt-4 flex flex-col gap-2">
+          <div className="mt-4 flex flex-col gap-2 text-center">
             <form
               className="w-96 space-y-4"
               onSubmit={handlePromise(form.handleSubmit(saveAccount))}
@@ -101,6 +102,14 @@ export default function ApplyPage() {
                   )}
                   Apply
                 </Button>
+              </div>
+              <div className="flex items-center justify-center gap-1">
+                <div className="text-sm text-slate-500">
+                  Already part of Monto?
+                </div>
+                <Link href="/sign-in" className="text-sm hover:underline">
+                  Sign in
+                </Link>
               </div>
             </form>
           </div>
