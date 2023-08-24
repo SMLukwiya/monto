@@ -12,7 +12,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>🤙 Contribute to great products together</title>
+        <title>🤙 Contribute to products together</title>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Monto" />
         <meta
