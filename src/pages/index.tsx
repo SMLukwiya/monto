@@ -14,7 +14,7 @@ const Home: NextPage = () => {
           <div className="mt-4 flex flex-col gap-2">
             <Link href="/issues">
               <Button size="sm" variant="secondary" className="text-xs">
-                Get started
+                Join beta
               </Button>
             </Link>
             <a
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
               target="_blank"
               className="pt-8 font-mono text-xs text-slate-500"
             >
-              GitHub Repo
+              GitHub repo
             </a>
           </div>
         </div>
