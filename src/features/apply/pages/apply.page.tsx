@@ -53,6 +53,9 @@ export default function ApplyPage() {
     <>
       <div className="flex h-screen items-center justify-center px-4 sm:px-8 ">
         <div className="mt-6 flex max-w-[770px] flex-col items-center justify-center gap-2">
+          <h1 className="text-xl font-semibold leading-tight tracking-tighter">
+            Apply to our community
+          </h1>
           <div className="mt-4 flex flex-col gap-2">
             <form
               className="w-96 space-y-4"
