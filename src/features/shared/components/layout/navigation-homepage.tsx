@@ -35,7 +35,7 @@ const NavigationRight = () => {
 
   // if (isSignedIn) {
   //   return (
-  //     <Link href="/dashboard">
+  //     <Link href="/home">
   //       <Button>
   //         Dashboard
   //         <ArrowRight className="ml-2 h-4 w-4" />

@@ -7,7 +7,7 @@ const SignInPage: NextPage = () => (
       path="/sign-in"
       routing="path"
       signUpUrl="/sign-up"
-      redirectUrl="/dashboard"
+      redirectUrl="/home"
     />
   </div>
 );

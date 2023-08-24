@@ -1,10 +1,10 @@
 import { Layout } from "@/features/shared/components/layout/layout";
 
-export default function DashboardPage() {
+export default function HomePage() {
   return (
     <>
       <Layout>
-        <div>Dashboard</div>
+        <div>Home</div>
       </Layout>
     </>
   );

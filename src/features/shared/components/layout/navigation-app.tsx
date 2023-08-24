@@ -14,7 +14,7 @@ import { buttonVariants } from "@/features/shared/components/ui/button";
 import { cn } from "@/features/shared/utils/utils";
 
 const MENU_ITEMS = Object.freeze([
-  { label: "🏠 Dashboard", path: "/dashboard" },
+  { label: "⛺ Home", path: "/home" },
   { label: "📥 Issues", path: "/issues" },
   { label: "🚦 Pre-Reviews", path: "/pre-reviews" },
   { label: "🔄 Pull Requests", path: "/pull-requests" },
