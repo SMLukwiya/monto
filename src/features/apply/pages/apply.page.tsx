@@ -67,7 +67,7 @@ export default function ApplyPage() {
                 <Input
                   id="url"
                   {...form.register("discordUsername")}
-                  placeholder="user123"
+                  placeholder="crocodilecoder360"
                 />
                 {form.formState.errors.discordUsername?.message && (
                   <p className="text-red-600">
