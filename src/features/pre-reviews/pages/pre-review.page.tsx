@@ -74,7 +74,7 @@ export default function PreReviewPage({ id }: { id: string }) {
                 className="cursor-pointer text-xs font-semibold"
                 onClick={() => setIsChatOpen((prev) => !prev)}
               >
-                AI Assistant
+                Coworker
               </div>
               <Switch
                 checked={isChatOpen}
