@@ -12,6 +12,14 @@ datasource db {
   shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
 }
 
+model Account {
+  id              String   @id @default(cuid())
+  discordUsername String
+  pullRequestUrl  String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
 model PullRequest {
   id         String   @id @default(cuid())
   createdAt  DateTime @default(now())
