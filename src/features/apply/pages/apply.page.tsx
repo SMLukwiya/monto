@@ -85,7 +85,7 @@ export default function ApplyPage() {
                 <Input
                   id="url"
                   {...form.register("pullRequestUrl")}
-                  placeholder="https://github.com/calcom/cal.com/pull/10509"
+                  placeholder="https://github.com/owner/repo/pull/10509"
                 />
                 {form.formState.errors.pullRequestUrl?.message && (
                   <p className="text-red-600">
