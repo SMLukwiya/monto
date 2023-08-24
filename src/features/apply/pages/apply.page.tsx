@@ -105,7 +105,7 @@ export default function ApplyPage() {
               </div>
               <div className="flex items-center gap-1">
                 <div className="text-sm text-slate-500">
-                  Already part of Monto?
+                  Already have an account?
                 </div>
                 <Link href="/sign-in" className="text-sm hover:underline">
                   Sign in
