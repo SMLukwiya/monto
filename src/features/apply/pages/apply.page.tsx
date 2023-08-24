@@ -88,7 +88,7 @@ export default function ApplyPage() {
                   placeholder="https://github.com/owner/repo/pull/10509"
                 />
                 {form.formState.errors.pullRequestUrl?.message && (
-                  <p className="text-red-600">
+                  <p className="pt-2 text-xs text-red-600">
                     {form.formState.errors.pullRequestUrl?.message}
                   </p>
                 )}
