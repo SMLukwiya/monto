@@ -63,7 +63,9 @@ export default function ApplyPage() {
               onSubmit={handlePromise(form.handleSubmit(saveAccount))}
             >
               <div>
-                <Label htmlFor="pullRequestUrl">Discord username</Label>
+                <div className="pb-2">
+                  <Label htmlFor="pullRequestUrl">Discord username</Label>
+                </div>
                 <Input
                   id="url"
                   {...form.register("discordUsername")}
