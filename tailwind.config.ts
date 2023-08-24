@@ -74,7 +74,6 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        shake: "shake 0.1s ease-in-out 1.1s 17",
       },
     },
   },
