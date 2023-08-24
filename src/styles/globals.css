@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.diff-line {
+  font-size: 12px;
+}
+
+.diff-gutter {
+  color: #cbd5e1;
+}
+
+.diff .diff-gutter-col {
+  width: 55px;
+}
+
+.diff .diff-code .token.property-access {
+  color: rgb(5, 80, 174);
+}
+
+.markdown-wrapper p,
+.markdown-wrapper pre {
+  padding-bottom: 12px;
+}
+
+.markdown-wrapper ol,
+.markdown-wrapper ul {
+  padding-bottom: 12px;
+  padding-left: 16px;
+}
+
+.markdown-wrapper ol {
+  list-style-type: decimal;
+}
+
+.markdown-wrapper ul {
+  list-style-type: disc;
+}
+
+.markdown-wrapper code {
+  padding: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background: none !important;
+  border: none !important;
+}
+
+.markdown-wrapper code.inline-code {
+  padding: 0.2em !important;
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+  background: #f8f8f8 !important;
+  border: 1px solid #dddddd !important;
+  color: #333333 !important;
+  border-radius: 3px !important;
+  font-size: 12px !important;
+}
+
+.markdown-wrapper a {
+  text-decoration: underline;
+  color: blue;
+}
+
+.markdown-wrapper h1,
+.markdown-wrapper h2,
+.markdown-wrapper h3,
+.markdown-wrapper h4,
+.markdown-wrapper h5,
+.markdown-wrapper h6 {
+  font-weight: 600;
+  padding-bottom: 12px;
+}
