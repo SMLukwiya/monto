@@ -20,7 +20,7 @@ const Home: NextPage = () => {
             <a
               href="https://github.com/montocode/monto"
               target="_blank"
-              className="pt-8 font-mono text-xs text-slate-500"
+              className="mt-8 font-mono text-xs text-slate-500"
             >
               GitHub repo
             </a>
