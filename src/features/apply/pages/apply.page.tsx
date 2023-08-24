@@ -53,11 +53,11 @@ export default function ApplyPage() {
   return (
     <>
       <div className="flex h-screen items-center justify-center px-4 sm:px-8 ">
-        <div className="mt-6 flex max-w-[770px] flex-col items-center justify-center gap-2">
+        <div className="mt-6 flex max-w-[770px] flex-col gap-2">
           <h1 className="text-xl font-semibold leading-tight tracking-tighter">
             Apply to our community
           </h1>
-          <div className="mt-4 flex flex-col gap-2 text-center">
+          <div className="mt-4 flex flex-col gap-2">
             <form
               className="w-96 space-y-4"
               onSubmit={handlePromise(form.handleSubmit(saveAccount))}
@@ -103,7 +103,7 @@ export default function ApplyPage() {
                   Apply
                 </Button>
               </div>
-              <div className="flex items-center justify-center gap-1">
+              <div className="flex items-center gap-1">
                 <div className="text-sm text-slate-500">
                   Already part of Monto?
                 </div>
