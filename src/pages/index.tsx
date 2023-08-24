@@ -2,8 +2,18 @@ import { type NextPage } from "next";
 
 import { Button } from "@/features/shared/components/ui/button";
 import Link from "next/link";
+import { useAuth } from "@clerk/nextjs";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const Home: NextPage = () => {
+  const router = useRouter();
+  const { isSignedIn } = useAuth();
+
+  useEffect(() => {
+    if (isSignedIn) void router.push("/home");
+  }, [isSignedIn, router]);
+
   return (
     <>
       <div className="flex h-screen items-center justify-center px-4 text-center sm:px-8 ">
