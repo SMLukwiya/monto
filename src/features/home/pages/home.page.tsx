@@ -21,7 +21,7 @@ export default function HomePage() {
         </div>
         <div
           className="grid-cols-auto-fill grid gap-2 pt-4"
-          style={{ gridTemplateColumns: "repeat(auto-fill, 70px)" }}
+          style={{ gridTemplateColumns: "repeat(auto-fill, 40px)" }}
         >
           {(users || []).map((user) => (
             <div key={user.id}>
