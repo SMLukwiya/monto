@@ -13,7 +13,7 @@ export default function HomePage() {
             {getGreetingBasedOnTime()} and welcome to Monto 👋
           </h1>
           <p className="pb-3">
-            Happy to have you aboard! We're a community of ambitious developers.
+            Happy to have you aboard! We’re a community of ambitious developers.
             We challenge ourselves to become better every day, support one
             another, and build a track record of great open source
             contributions.
