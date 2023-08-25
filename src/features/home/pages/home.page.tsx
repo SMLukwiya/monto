@@ -12,9 +12,11 @@ export default function HomePage() {
           <h1 className="scroll-m-20 pb-2 text-2xl font-bold tracking-tight">
             {getGreetingBasedOnTime()} and welcome to Monto 👋
           </h1>
-          <p>
-            Happy to have you aboard! First things first, let us quickly
-            introduce ourselves. So who are we and what do we do?
+          <p className="pb-3">
+            Happy to have you aboard! We're a community of ambitious developers.
+            We challenge ourselves to become better every day, support one
+            another, and build a track record of great open source
+            contributions.
           </p>
         </div>
         <div
