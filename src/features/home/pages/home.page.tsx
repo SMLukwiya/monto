@@ -1,5 +1,6 @@
 import { Layout } from "@/features/shared/components/layout/layout";
 import { api } from "@/server/lib/api";
+import { Square } from "lucide-react";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -37,6 +38,29 @@ export default function HomePage() {
         </div>
         <div className="max-w-[660px] pt-8">
           <h2 className="scroll-m-20 pb-2 text-lg font-bold tracking-tight">
+            Onboarding checklist
+          </h2>
+          <p className="pb-3">
+            Our first mission is to get you up and running. By completing these
+            steps, you’ll learn a lot about our community and how we work.
+          </p>
+          <div className="flex items-center gap-2 pb-2">
+            <Square className="h-4 w-4" /> <div>Join the community</div>
+          </div>
+          <div className="flex items-center gap-2 pb-2">
+            <Square className="h-4 w-4" />{" "}
+            <div>Find an interesting issue and give it a go</div>
+          </div>
+          <div className="flex items-center gap-2 pb-2">
+            <Square className="h-4 w-4" />{" "}
+            <div>Submit a PR and have it merged</div>
+          </div>
+          <div className="flex items-center gap-2 pb-2">
+            <Square className="h-4 w-4" /> <div>Celebrate 🎉</div>
+          </div>
+        </div>
+        <div className="max-w-[660px] pt-8">
+          <h2 className="scroll-m-20 pb-2 text-lg font-bold tracking-tight">
             Step 1: Join the community
           </h2>
           <p className="pb-3">
@@ -48,8 +72,8 @@ export default function HomePage() {
             >
               invite link
             </a>
-            ) and say hello to the community by making a post in the #random
-            channel. You can use this template or draft your own message 🙂
+            ) and say hello to everyone by making a post in the #random channel.
+            You can use this template or draft your own message 🙂
           </p>
           <p className="rounded-lg bg-slate-100 p-8 text-sm text-slate-800">
             Hi everyone, I’m [Your Name] from [Your Location], and I’m happy to
