@@ -3,7 +3,9 @@ import { clerkClient } from "@clerk/nextjs";
 
 export const userRouter = createTRPCRouter({
   list: privateProcedure.query(async () => {
-    const users = await clerkClient.users.getUserList({});
+    const users = await clerkClient.users.getUserList({
+      orderBy: "created_at",
+    });
 
     return users.map((user) => ({
       id: user.id,

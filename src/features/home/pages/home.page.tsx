@@ -17,9 +17,12 @@ export default function HomePage() {
             introduce ourselves. So who are we and what do we do?
           </p>
         </div>
-        <div className="pt-4">
+        <div
+          className="grid-cols-auto-fill grid gap-3 pt-4"
+          style={{ gridTemplateColumns: "repeat(auto-fill, 70px)" }}
+        >
           {(users || []).map((user) => (
-            <div key={user.id} className="pb-3 pr-3">
+            <div key={user.id}>
               <Image
                 src={user.profileImageUrl}
                 alt="profile image"
