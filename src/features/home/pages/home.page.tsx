@@ -52,11 +52,11 @@ export default function HomePage() {
             channel. You can use this template or draft your own message 🙂
           </p>
           <p className="rounded-lg bg-slate-100 p-8 text-sm text-slate-800">
-            Hi everyone, I'm [Your Name] from [Your Location], and I'm happy to
+            Hi everyone, I’m [Your Name] from [Your Location], and I'm happy to
             be part of the community! 🙌
             <br />
             <br />
-            Here's a little more about me:
+            Here’s a little more about me:
             <br />
             <br />- <strong>Quick Introduction:</strong> [Something interesting
             about yourself or what you do]
