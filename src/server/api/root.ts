@@ -11,6 +11,7 @@ import { issueRouter } from "../../features/issues/server/issue.router";
 import { fileContentRouter } from "@/features/pre-reviews/server/file-content.router";
 import { fullFileDiffRouter } from "@/features/pre-reviews/server/full-file-diff.router";
 import { accountRouter } from "@/features/apply/server/account.router";
+import { userRouter } from "@/features/home/server/user.router";
 
 /**
  * This is the primary router for your server.
@@ -30,6 +31,7 @@ export const appRouter = createTRPCRouter({
   fileContent: fileContentRouter,
   fullFileDiff: fullFileDiffRouter,
   account: accountRouter,
+  user: userRouter,
 });
 
 // export type definition of API

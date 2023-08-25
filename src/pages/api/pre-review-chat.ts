@@ -6,11 +6,19 @@ import {
   ChatPromptTemplate,
   SystemMessagePromptTemplate,
 } from "langchain/prompts";
+import { type NextApiRequest, type NextApiResponse } from "next";
+import { getAuth } from "@clerk/nextjs/server";
 
 export const runtime = "edge";
 
-export default async function POST(req: Request) {
-  const request = (await req.json()) as {
+export default async function POST(req: NextApiRequest, res: NextApiResponse) {
+  const { userId } = getAuth(req);
+
+  if (!userId) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+  const request = (await (req as unknown as Request).json()) as {
     messages: Message[];
     title: string;
     diff: string;

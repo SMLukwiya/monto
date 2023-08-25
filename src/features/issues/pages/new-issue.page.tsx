@@ -20,13 +20,13 @@ export default function NewIssuePage() {
   const router = useRouter();
   const ctx = api.useContext();
   const mutation = api.issue.create.useMutation({
-    onSuccess: async () => {
+    onSuccess: async (data) => {
       toast({
         description: "Your issue has been created.",
       });
 
-      await ctx.pullRequest.invalidate();
-      await router.push("/issues");
+      await ctx.issue.invalidate();
+      await router.push(`/issues/${data.id}`);
     },
     onError: (e) => {
       const errorMessage = e.data?.zodError?.fieldErrors.content;

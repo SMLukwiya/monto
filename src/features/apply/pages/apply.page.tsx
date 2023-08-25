@@ -5,10 +5,12 @@ import { toast } from "@/features/shared/components/ui/use-toast";
 import { useZodForm } from "@/features/shared/hooks/use-zod-form";
 import { handlePromise } from "@/features/shared/utils/utils";
 import { api } from "@/server/lib/api";
-import { Loader2 } from "lucide-react";
+import { Check, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { z } from "zod";
+import Confetti from "react-confetti";
+import { useEffect, useState } from "react";
 
 const formSchema = z.object({
   discordUsername: z.string(),
@@ -16,19 +18,26 @@ const formSchema = z.object({
 });
 
 export default function ApplyPage() {
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
+
   const router = useRouter();
   const ctx = api.useContext();
   const mutation = api.account.create.useMutation({
     onSuccess: async () => {
+      setShowConfetti(true);
+      await new Promise((resolve) => setTimeout(resolve, 4000));
       await ctx.account.invalidate();
       await router.push("/sign-up");
     },
     onError: (e) => {
-      const errorMessage = e.data?.zodError?.fieldErrors.content;
-      if (errorMessage && errorMessage[0]) {
+      const zodErrorMessage = e.data?.zodError?.fieldErrors.content;
+      const errorMessage = (zodErrorMessage && zodErrorMessage[0]) || e.message;
+      if (errorMessage) {
         toast({
           variant: "destructive",
-          description: errorMessage[0],
+          description: errorMessage,
         });
       } else {
         toast({
@@ -39,11 +48,17 @@ export default function ApplyPage() {
     },
   });
 
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    setWindowHeight(window.innerHeight);
+  }, []);
+
   const form = useZodForm({
     schema: formSchema,
   });
 
   function saveAccount(data: z.infer<typeof formSchema>) {
+    console.log(data);
     return mutation.mutate({
       discordUsername: data.discordUsername,
       pullRequestUrl: data.pullRequestUrl,
@@ -52,6 +67,7 @@ export default function ApplyPage() {
 
   return (
     <>
+      {showConfetti && <Confetti width={windowWidth} height={windowHeight} />}
       <div className="flex h-screen items-center justify-center p-2">
         <div className="mt-6 flex w-96 flex-col gap-2">
           <h1 className="text-xl font-semibold leading-tight tracking-tighter">
@@ -97,12 +113,14 @@ export default function ApplyPage() {
                 <Button
                   className="w-full"
                   type="submit"
-                  disabled={mutation.isLoading}
+                  disabled={mutation.isLoading || showConfetti}
                 >
-                  {mutation.isLoading && (
+                  {mutation.isLoading && !showConfetti && (
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                   )}
-                  Apply
+                  {showConfetti && <Check className="mr-2 h-4 w-4" />}
+                  {!showConfetti && "Apply"}
+                  {showConfetti && "Accepted"}
                 </Button>
               </div>
               <div className="flex items-center gap-1">
