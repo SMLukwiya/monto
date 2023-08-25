@@ -9,7 +9,7 @@ export default function HomePage() {
     <>
       <Layout>
         <div className="max-w-[660px]">
-          <h1 className="scroll-m-20 pb-2 text-2xl font-bold tracking-tight">
+          <h1 className="scroll-m-20 pb-2 pt-2 text-2xl font-bold tracking-tight">
             {getGreetingBasedOnTime()} and welcome to Monto 👋
           </h1>
           <p className="pb-3">
@@ -34,6 +34,41 @@ export default function HomePage() {
               />
             </div>
           ))}
+        </div>
+        <div className="max-w-[660px] pt-8">
+          <h2 className="scroll-m-20 pb-2 text-lg font-bold tracking-tight">
+            Step 1: Join the community
+          </h2>
+          <p className="pb-3">
+            To get things started, join our Discord server (
+            <a
+              href="https://discord.gg/WghCteUrEv"
+              target="_blank"
+              className="text-slate-500 hover:underline"
+            >
+              invite link
+            </a>
+            ) and say hello to the community by making a post in the #random
+            channel. You can use this template or draft your own message 🙂
+          </p>
+          <p className="rounded-lg bg-slate-100 p-8 text-sm text-slate-800">
+            Hi everyone, I'm [Your Name] from [Your Location], and I'm happy to
+            be part of the community! 🙌
+            <br />
+            <br />
+            Here's a little more about me:
+            <br />
+            <br />- <strong>Quick Introduction:</strong> [Something interesting
+            about yourself or what you do]
+            <br />- <strong>Hobbies or Activities:</strong> [What you enjoy
+            doing in your free time]
+            <br />- <strong>Fun Fact:</strong> [Something quirky or unexpected
+            about you]
+            <br />- <strong>If I Could Eat One Meal Forever:</strong> [Your
+            go-to meal]
+            <br />- <strong>Favorite Media:</strong> [A book, movie, TV show,
+            game, podcast, or song you love, and why it resonates with you]
+          </p>
         </div>
       </Layout>
     </>
