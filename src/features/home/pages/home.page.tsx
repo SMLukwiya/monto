@@ -52,7 +52,7 @@ export default function HomePage() {
             channel. You can use this template or draft your own message 🙂
           </p>
           <p className="rounded-lg bg-slate-100 p-8 text-sm text-slate-800">
-            Hi everyone, I’m [Your Name] from [Your Location], and I'm happy to
+            Hi everyone, I’m [Your Name] from [Your Location], and I’m happy to
             be part of the community! 🙌
             <br />
             <br />
