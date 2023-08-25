@@ -1,11 +1,21 @@
 import { Layout } from "@/features/shared/components/layout/layout";
 import { Button } from "@/features/shared/components/ui/button";
 import { api } from "@/server/lib/api";
-import { Square } from "lucide-react";
+import { Loader2, Square } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Welcome({ onSubmit }: { onSubmit: () => void }) {
+  const [isLoading, setIsLoading] = useState(false);
   const { data: users } = api.user.list.useQuery();
+
+  async function handleOnSubmit() {
+    setIsLoading(true);
+    // wait for 1 second and show the loader
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    onSubmit();
+    setIsLoading(false);
+  }
 
   return (
     <>
@@ -95,7 +105,8 @@ export default function Welcome({ onSubmit }: { onSubmit: () => void }) {
             game, podcast, or song you love, and why it resonates with you]
           </p>
         </div>
-        <Button onClick={() => onSubmit()} className="mt-6">
+        <Button onClick={() => void handleOnSubmit()} className="mt-6">
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           Mark as done
         </Button>
       </Layout>
