@@ -40,7 +40,7 @@ const NavigationDesktop = () => {
       <div>
         <Link href="/issues" className="flex cursor-pointer px-2">
           <div className="flex cursor-pointer items-center gap-2">
-            <Image src="/logo.svg" alt="logo" width={85} height={22} />
+            <Image src="/logo.svg" alt="logo" width={71} height={17} />
           </div>
         </Link>
       </div>
